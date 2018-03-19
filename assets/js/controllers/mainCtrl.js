@@ -6,5 +6,16 @@
 				$mdSidenav('left')
 					.toggle();
 			}
+			if ("geolocation" in navigator) {
+				navigator.geolocation.getCurrentPosition(function(position) {
+					console.log(position.coords);
+				}, function errorCallback(error) {
+					console.log(error);
+				}, {
+					enableHighAccuracy: true,
+					maximumAge: Infinity,
+					timeout: 10000
+				});
+			}
 	}])
 })();
