@@ -1,0 +1,8 @@
+<md-content>
+	<div layout="column" class="headline-card" ng-repeat="headline in headlines" style="background-image: linear-gradient(rgba(60,55,65,0.3),rgba(60,55,65,1)),url({{headline.urlToImage}});animation-delay: {{$index*0.5}}s;" ng-click="goto(headline.url)" ngfx-fade-in="!!headlines">
+		<span flex></span>
+		<h1 class="headline-card--heading">
+			{{headline.title}}
+		</h1>
+	</div>
+</md-content>
